@@ -23,7 +23,7 @@ git clone https://github.com/pontiggia/tpo_encuestas.git
 ```
 Navega hasta la carpeta del proyecto:
 ```bash
-cd tpo
+cd tpo_encuestas
 ```
 Crea un entorno virtual (OPCIONAL):
 ```bash
