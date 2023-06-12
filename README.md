@@ -39,7 +39,7 @@ Instala las dependencias:
 ```bash
 pip install -r requirements.txt
 ```
-## Conexion a la base de datos
+## Conexion a la base de datos (muestra, no editar nada)
 
 ```python
 # Muestra de conexión a la base de datos remota MySQL (esto no se mostrará en el repositorio)
