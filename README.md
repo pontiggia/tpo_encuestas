@@ -19,7 +19,7 @@ Esta es una aplicación web de encuestas desarrollada con Python(Flask), HTML, C
 ## Setup
 Clona el repositorio:
 ```bash
-git clone
+git clone https://github.com/pontiggia/tpo_encuestas.git
 ```
 Navega hasta la carpeta del proyecto:
 ```bash
