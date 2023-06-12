@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Admin{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='styles/style.css')}}">
+</head>
+<body>
+    <canvas id="galaxy-canvas"></canvas>
+    <a class="volver_inicio" href="{{ url_for('auth.logout') }}">cerrar sesión</a>
+    <div class="container-titulo">
+        <h1 class="titulo">Servicio Tecnico Apple</h1>
+        <h2>Seguridad de la informacion</h2>
+    </div>
+  <div class="container text-center">
+    <div class="row row-cols-2">
+      <div class="col">
+        <div class="card_usuarios">
+          <div class="content-card_usuarios">
+            <h3 class="Encuestas"><a href="{{  url_for('static', filename='encuesta1.html')}}"><a href="">Encuesta 1</a></h3>
+            <div class="container-respuestas">
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario {{random_user.name}}</option>
+                <option disabled>a diario </option>
+                <option disabled>ofacilidad de uso </option>
+                <option disabled>muy positiva </option>
+                <option disabled>mejorar la interfaz de usuario </option>
+              </select>
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario {{random_user.name}}</option>
+                <option disabled>ocasionalmente </option>
+                <option disabled>seguridad</option>
+                <option disabled>positiva </option>
+                <option disabled>incrementar estabilidad</option>
+              </select>
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario {{random_user.name}}</option>
+                <option disabled>varias veces a la semana </option>
+                <option disabled>funcionalidad </option>
+                <option disabled>neutral </option>
+                <option disabled>agregar mas funcionalidades</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card_usuarios">
+          <div class="content-card_usuarios">
+            <h3 class="Encuestas"><a href="{{  url_for('static', filename='encuesta2.html')}}"><a href="">Encuesta 2</a></h3>
+            <div class="container-respuestas">
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario {{random_user.name}}</option>
+                <option disabled>Una vez a la semana </option>
+                <option disabled>Seguridad </option>
+                <option disabled>Negativa </option>
+                <option disabled>mejorar la interfaz de usuario </option>
+              </select>
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario {{random_user.name}}</option>
+                <option disabled>Ocacionalmente </option>
+                <option disabled>Estabilidad y rendimiento </option>
+                <option disabled>Positiva </option>
+                <option disabled>Incrementar estabilidad </option>
+              </select>
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario {{random_user.name}}</option>
+                <option disabled>Una vez a la semana </option>
+                <option disabled>funcionalidad </option>
+                <option disabled>Negativa </option>
+                <option disabled>Agregar funcionalidades </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card_usuarios">
+          <div class="content-card_usuarios">
+            <h3 class="Encuestas"><a href="{{  url_for('static', filename='encuesta3.html')}}"><a href="">Encuesta 3</a></h3>
+            <div class="container-respuestas">
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario {{random_user.name}}</option>
+                <option disabled>Diariamente</option>
+                <option disabled>Rendimiento</option>
+                <option disabled>Neutral</option>
+                <option disabled>Agregar nuevas funcionalidades</option>
+              </select>
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario {{random_user.name}}</option>
+                <option disabled>Varias veces al mes</option>
+                <option disabled>Usabilidad</option>
+                <option disabled>Positiva</option>
+                <option disabled>Mejorar la experiencia</option>
+              </select>
+              <label for="dropdown">Usuario {{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario </option>
+                <option disabled>Ocasionalmente</option>
+                <option disabled>Seguridad</option>
+                <option disabled>Negativa</option>
+                <option disabled>Resolver problemas de seguridad</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card_usuarios">
+          <div class="content-card_usuarios">
+            <h3 class="Encuestas"><a href="{{  url_for('static', filename='encuesta4.html')}}"><a href="">Encuesta 4</a></h3>
+            <div class="container-respuestas">
+              <label for="dropdown">{{random_user.name}}</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario 1</option>
+                <option disabled>Una vez al mes</option>
+                <option disabled>Facilidad de uso</option>
+                <option disabled>Negativa</option>
+                <option disabled>Mejorar la documentación</option>
+              </select>
+              <label for="dropdown">Usuario 2</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario 2</option>
+                <option disabled>Varias veces a la semana</option>
+                <option disabled>Compatibilidad</option>
+                <option disabled>Positiva</option>
+                <option disabled>Actualizar a las últimas versiones</option>
+              </select>
+              <label for="dropdown">Usuario 3</label>
+              <select id="dropdown">
+                <option disabled>Respuestas del usuario 3</option>
+                <option disabled>Ocasionalmente</option>
+                <option disabled>Funcionalidad</option>
+                <option disabled>Neutral</option>
+                <option disabled>Agregar integraciones</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta1-Servicio Tecnico</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <canvas id="galaxy-canvas"></canvas>
+    <a class="volver_inicio" href="/selector_encuestas">volver al inicio</a>
+    <div class="container-titulo">
+      <h1 class="titulo">Servicio Tecnico Apple</h1>
+      <h2>Seguridad de la informacion</h2>
+    </div>
+    <form id="form_encuesta">
+      <div class="container_encuesta">
+        <div class="encuestas">
+          <ol>
+            <!-- Pregunta 1 -->
+            <li>
+              ¿Qué medidas de seguridad de la información implementa tu empresa
+              actualmente?
+            </li>
+            <label class="container_check">
+              <input
+                name="seguridad_1a"
+                value="politicas_contrasenas"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Políticas de contraseñas fuertes</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_1a"
+                value="encriptacion_datos"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Encriptación de datos</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_1a"
+                value="autenticacion_dos_factores"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Autenticación de dos factores</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_1a"
+                value="actualizaciones_software"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>
+                  Actualizaciones de software y parches de seguridad regulares
+                </p>
+              </div>
+            </label>
+
+            <!-- Pregunta 2 -->
+            <li>
+              ¿Cómo evalúas la eficacia de las medidas de seguridad de la
+              información en tu organización?
+            </li>
+            <label class="container_check">
+              <input
+                name="seguridad_2a"
+                value="muy_eficaz"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Muy eficaz</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_2a"
+                value="eficaz"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Eficaz</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_2a"
+                value="moderadamente_eficaz"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Moderadamente eficaz</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_2a"
+                value="poco_eficaz"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Poco eficaz</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_2a"
+                value="no_estoy_seguro"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>No estoy seguro</p>
+              </div>
+            </label>
+
+            <!-- Pregunta 3 -->
+            <li>
+              ¿Te sientes suficientemente capacitado para proteger la
+              información sensible de la empresa?
+            </li>
+            <label class="container_check">
+              <input
+                name="seguridad_3a"
+                value="completamente_capacitado"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Sí, me siento completamente capacitado</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_3a"
+                value="capacitado_pero_mas_formacion"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Sí, pero necesito más formación</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_3a"
+                value="poco_capacitado"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>No, me siento poco capacitado</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_3a"
+                value="no_estoy_seguro"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>No estoy seguro</p>
+              </div>
+            </label>
+
+            <!-- Pregunta 4 -->
+            <li>
+              ¿Cuál consideras que es el mayor desafío en materia de seguridad
+              de la información para tu empresa?
+            </li>
+            <label class="container_check">
+              <input
+                name="seguridad_4a"
+                value="proteccion_externa"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>
+                  Protección contra amenazas externas (hackers, malware, etc.)
+                </p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_4a"
+                value="proteccion_interna"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>
+                  Protección contra amenazas internas (filtraciones, mal uso de
+                  información, etc.)
+                </p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_4a"
+                value="gestion_riesgos"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Gestión de riesgos y vulnerabilidades</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="seguridad_4a"
+                value="concientizacion_personal"
+                type="checkbox"
+                onclick="limitarSeleccion(this)"
+              />
+              <div class="checkmark">
+                <p>Concientización y capacitación del personal</p>
+              </div>
+            </label>
+          </ol>
+          <button type="submit" class="btn-en">Enviar encuesta</button>
+        </div>
+      </div>
+    </form>
+    <!-- Enlaces de js -->
+    <script>
+      function limitarSeleccion(checkbox) {
+        const checkboxes = document.getElementsByName(checkbox.name);
+
+        checkboxes.forEach((item) => {
+          if (item !== checkbox) {
+            item.checked = false;
+          }
+        });
+      }
+    </script>
+    <script src="scripts/modo-claro.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="scripts/script.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

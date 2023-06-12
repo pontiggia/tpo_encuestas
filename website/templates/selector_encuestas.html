@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuestas-Servicio Tecnico</title>
+    <link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='styles/style.css')}}">
+</head>
+
+<body>
+    <canvas id="galaxy-canvas"></canvas>
+    <a class="volver_inicio" href="{{ url_for('auth.logout') }}">cerrar sesión</a>
+    <div class="container">
+        <h1 class="titulo">Servicio Tecnico Apple</h1>
+    </div>
+    <!-- Inicio de selector de encuestas -->
+    <div class="container-cards">
+        <!-- Encuesta 1 -->
+        <div class="card">
+            <div class="content-card">
+                <h3 class="Encuestas"> <a href="{{  url_for('static', filename='encuesta1.html')}}">Encuesta 1</a></h3>
+                <div class="barra-principal">
+                    <div class="progreso"></div>
+                </div>
+                <a class="enlace-encuesta" href="{{  url_for('static', filename='encuesta1.html')}}">Ir a la encuesta</a>
+            </div>
+        </div>
+        <!-- Encuesta 2 -->
+        <div class="card">
+            <div class="content-card">
+                <h3 class="Encuestas"><a href="{{  url_for('static', filename='encuesta2.html')}}"><a href="">Encuesta 2</a></h3>
+                <div class="barra-principal">
+                    <div class="progreso"></div>
+                </div>
+                <a class="enlace-encuesta" href="{{  url_for('static', filename='encuesta2.html')}}">Ir a la encuesta</a>
+            </div>
+        </div>
+        <!-- Encuesta 3 -->
+        <div class="card">
+            <div class="content-card">
+                <h3 class="Encuestas"><a href="{{  url_for('static', filename='encuesta3.html')}}">Encuesta 3</a></h3>
+                <div class="barra-principal">
+                    <div class="progreso"></div>
+                </div>
+                <a class="enlace-encuesta" href="{{  url_for('static', filename='encuesta3.html')}}">Ir a la encuesta</a>
+            </div>
+        </div>
+        <!-- Encuesta 4 -->
+        <div class="card">
+            <div class="content-card">
+                <h3 class="Encuestas"><a href="{{  url_for('static', filename='encuesta4.html')}}">Encuesta 4</a></h3>
+                <div class="barra-principal">
+                    <div class="progreso"></div>
+                </div>
+                <a class="enlace-encuesta" href="{{  url_for('static', filename='encuesta4.html')}}">Ir a la encuesta</a>
+            </div>
+        </div>
+    </div>
+    <!-- Fin de selector de encuestas -->
+    <!-- Inicio de boton modo claro -->
+    <div class="container-boton">
+        <div class="toggle">
+            <input class="mode-toggle" type="checkbox">
+            <span class="button"></span>
+            <span class="label">☼</span>
+        </div>
+    </div>
+    <!-- Fin de boton modo claro -->
+    <!-- Inicio de footer -->
+    <footer>
+        <p>Copyright © 2023 Apple Inc. Todos los derechos reservados.</p>
+        <p>Equipo: 22</p>
+        <p>Marinoni Francisco</p>
+        <p>Pontiggia Felipe</p>
+    </footer>
+    <!-- Fin de footer -->
+
+    <!-- enlaces de js -->
+    <script src="{{  url_for('static', filename='scripts/modo-claro.js')}}"></script>
+    <script src="{{  url_for('static', filename='scripts/script.js')}}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

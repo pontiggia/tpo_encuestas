@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta2-Servicio Tecnico</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+    <canvas id="galaxy-canvas"></canvas>
+    <a class="volver_inicio" href="/selector_encuestas">volver al inicio</a>
+    <div class="container-titulo">
+        <h1 class="titulo">Servicio Tecnico Apple</h1>
+        <h2> Experiencia del usuario de Software</h2>
+    </div>
+    <form id="form_encuesta">
+        <div class="container_encuesta">
+            <div class="encuestas">
+                <ol>
+                    <!-- Pregunta 1 -->
+                    <li>¿Con qué frecuencia utilizas software relacionado con tu trabajo diario?</li>
+                    <label class="container_check">
+                        <input name="software_1b" class="grupo1" value="a_diario" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>A diario</p>
+                        </div>
+                    </label>
+                    <label class="container_check">
+                        <input name="software_1b" class="grupo1" value="varias_veces_semana" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Varias veces a la semana</p>
+                        </div>
+                    </label>
+                    <label class="container_check">
+                        <input name="software_1b" class="grupo1" value="ocasionalmente" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Ocasionalmente</p>
+                        </div>
+                    </label>
+                    <label class="container_check">
+                        <input name="software_1b" class="grupo1" value="nunca" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Nunca</p>
+                        </div>
+                    </label>
+                    <!-- Pregunta 2 -->
+                    <li>¿Qué aspectos te parecen más importantes al evaluar la calidad de un software?</li>
+                    <label class="container_check">
+                        <input name="software_2b" value="facilidad_uso" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Facilidad de uso</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_2b" value="estabilidad_rendimiento" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Estabilidad y rendimiento</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_2b" value="seguridad" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Seguridad</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_2b" value="funcionalidad" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Funcionalidad</p>
+                        </div>
+                    </label>
+
+                    <!-- Pregunta 3 -->
+                    <li>¿Cuál ha sido tu experiencia general con el software utilizado en tu área de trabajo?</li>
+                    <label class="container_check">
+                        <input name="software_3b" value="muy_positiva" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Muy positiva</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_3b" value="positiva" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Positiva</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_3b" value="neutral" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Neutral</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_3b" value="negativa" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Negativa</p>
+                        </div>
+                    </label>
+
+                    <!-- Pregunta 4 -->
+                    <li>¿Qué mejoras sugerirías para optimizar la experiencia del usuario de los programas que utilizas?
+                    </li>
+                    <label class="container_check">
+                        <input name="software_4b" value="mejorar_interfaz" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Mejorar la interfaz de usuario</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_4b" value="agregar_funcionalidades" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Agregar más funcionalidades</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_4b" value="incrementar_estabilidad" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Incrementar la estabilidad y rendimiento</p>
+                        </div>
+                    </label>
+
+                    <label class="container_check">
+                        <input name="software_4b" value="mejorar_documentacion" type="checkbox" onclick="limitarSeleccion(this)">
+                        <div class="checkmark">
+                            <p>Mejorar la documentación y soporte técnico</p>
+                        </div>
+                    </label>
+                </ol>
+                <div class="container">
+                    <button id="submit-button"><p class="color-button" id="tamaño">Enviar respuestas</p></button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Enlaces de js -->
+    <script>
+        function limitarSeleccion(checkbox) {
+            const checkboxes = document.getElementsByName(checkbox.name);
+
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) {
+                    item.checked = false;
+                }
+            });
+        }
+    </script>
+<script src="scripts/modo-claro.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="scripts/script.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</body>
+
+</html>

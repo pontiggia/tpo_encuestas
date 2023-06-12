@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta3-Servicio Tecnico</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/style.css"
+    />
+  </head>
+  <body>
+    <canvas id="galaxy-canvas"></canvas>
+    <a class="volver_inicio" href="/selector_encuestas"
+      >volver al inicio</a
+    >
+    <div class="container-titulo">
+      <h1 class="titulo">Servicio Tecnico Apple</h1>
+      <h2>Evaluacion del soporte IT</h2>
+    </div>
+    <form id="form_encuesta">
+      <div class="container_encuesta">
+        <div class="encuestas">
+          <ol>
+            <!-- Pregunta 1 -->
+            <li>¿Con qué frecuencia utilizas los canales de soporte de IT?</li>
+            <label class="container_check">
+              <input name="soporte" value="diariamente" type="checkbox"/>
+              <div class="checkmark">
+                <p>A diario</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="soporte"
+                value="varias_veces_semana"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Varias veces a la semana</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="una_vez_semana" type="checkbox" />
+              <div class="checkmark">
+                <p>Una vez a la semana</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="ocasionalmente" type="checkbox" />
+              <div class="checkmark">
+                <p>Ocasionalmente</p>
+              </div>
+            </label>
+
+            <!-- Pregunta 2 -->
+            <li>¿Qué canal de soporte de IT prefieres utilizar?</li>
+            <label class="container_check">
+              <input
+                name="soporte"
+                value="correo_electronico"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Correo electrónico</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="telefono" type="checkbox" />
+              <div class="checkmark">
+                <p>Teléfono</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="chat_en_vivo" type="checkbox" />
+              <div class="checkmark">
+                <p>Chat en vivo</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="sistema_tickets" type="checkbox" />
+              <div class="checkmark">
+                <p>Sistema de tickets</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="otro" type="checkbox" />
+              <div class="checkmark">
+                <p>Otro (especificar): ______________</p>
+              </div>
+            </label>
+
+            <!-- Pregunta 3 -->
+            <li>
+              ¿Cómo calificarías la rapidez y eficiencia del soporte de IT?
+            </li>
+            <label class="container_check">
+              <input
+                name="soporte"
+                value="muy_rapido_eficiente"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Muy rápido y eficiente</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="rapido_eficiente" type="checkbox" />
+              <div class="checkmark">
+                <p>Rápido y eficiente</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="moderado" type="checkbox" />
+              <div class="checkmark">
+                <p>Moderado</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="lento" type="checkbox" />
+              <div class="checkmark">
+                <p>Lento</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="muy_lento" type="checkbox" />
+              <div class="checkmark">
+                <p>Muy lento</p>
+              </div>
+            </label>
+
+            <!-- Pregunta 4 -->
+            <li>¿Qué mejoras sugerirías para el soporte de IT?</li>
+            <label class="container_check">
+              <input
+                name="soporte"
+                value="respuesta_mas_rapida"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Respuesta más rápida</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="soporte"
+                value="mejor_comunicacion"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Mejor comunicación y seguimiento del estado del incidente</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="soporte"
+                value="mayor_disponibilidad"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Mayor disponibilidad del soporte</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="soporte" value="mejor_formacion" type="checkbox" />
+              <div class="checkmark">
+                <p>Mejor formación del personal de soporte</p>
+              </div>
+            </label>
+          </ol>
+          <div class="container">
+            <button type="submit" class="btn-en">Enviar encuesta</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Enlaces de js -->
+    <script>
+      function limitarSeleccion(checkbox) {
+        const checkboxes = document.getElementsByName(checkbox.name);
+
+        checkboxes.forEach((item) => {
+          if (item !== checkbox) {
+            item.checked = false;
+          }
+        });
+      }
+    </script>
+    <script src="scripts/modo-claro.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="scripts/script.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

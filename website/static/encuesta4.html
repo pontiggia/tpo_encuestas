@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta4-Servicio Tecnico</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/style.css"
+    />
+  </head>
+
+  <body>
+    <canvas id="galaxy-canvas"></canvas>
+    <a class="volver_inicio" href="/selector_encuestas"
+      >volver al inicio</a
+    >
+    <div class="container-titulo">
+      <h1 class="titulo">Servicio Tecnico Apple</h1>
+      <h2>Gestion de proyectos IT</h2>
+    </div>
+    <form id="form_encuesta">
+      <div class="container_encuesta">
+        <div class="encuestas">
+          <ol>
+            <!-- Pregunta 1 -->
+            <li>
+              ¿Cómo evalúas la comunicación entre los miembros del equipo en los
+              proyectos de IT?
+            </li>
+            <label class="container_check">
+              <input name="proyectos" value="excelente" type="checkbox" />
+              <div class="checkmark">
+                <p>Excelente</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="proyectos" value="buena" type="checkbox" />
+              <div class="checkmark">
+                <p>Buena</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="proyectos" value="regular" type="checkbox" />
+              <div class="checkmark">
+                <p>Regular</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="proyectos" value="deficiente" type="checkbox" />
+              <div class="checkmark">
+                <p>Deficiente</p>
+              </div>
+            </label>
+
+            <!-- Pregunta 2 -->
+            <li>¿Cómo calificarías la planificación de los proyectos de IT?</li>
+            <label class="container_check">
+              <input
+                name="proyectos"
+                value="muy_bien_planificado"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Muy bien planificado</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="proyectos"
+                value="bien_planificado"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Bien planificado</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="proyectos"
+                value="poco_planificado"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Poco planificado</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="proyectos" value="mal_planificado" type="checkbox" />
+              <div class="checkmark">
+                <p>Mal planificado</p>
+              </div>
+            </label>
+
+            <!-- Pregunta 3 -->
+            <li>
+              ¿Cuál consideras que es el mayor desafío en la gestión de
+              proyectos de IT?
+            </li>
+            <label class="container_check">
+              <input name="proyectos" value="plazos" type="checkbox" />
+              <div class="checkmark">
+                <p>Cumplir con los plazos establecidos</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="proyectos" value="presupuesto" type="checkbox" />
+              <div class="checkmark">
+                <p>Mantenerse dentro del presupuesto asignado</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="proyectos" value="alcance" type="checkbox" />
+              <div class="checkmark">
+                <p>Gestionar el alcance del proyecto</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input name="proyectos" value="recursos" type="checkbox" />
+              <div class="checkmark">
+                <p>Optimizar la asignación de recursos</p>
+              </div>
+            </label>
+
+            <!-- Pregunta 4 -->
+            <li>
+              ¿Qué aspectos consideras importantes para mejorar la gestión de
+              proyectos de IT?
+            </li>
+            <label class="container_check">
+              <input
+                name="proyectos"
+                value="comunicacion_efectiva"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Comunicación efectiva entre el equipo</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="proyectos"
+                value="planificacion_detallada"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Planificación más detallada y realista</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="proyectos"
+                value="mejor_gestion_alcance"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Mejor gestión del alcance del proyecto</p>
+              </div>
+            </label>
+
+            <label class="container_check">
+              <input
+                name="proyectos"
+                value="seguimiento_avance"
+                type="checkbox"
+              />
+              <div class="checkmark">
+                <p>Mayor seguimiento y control del avance</p>
+              </div>
+            </label>
+          </ol>
+          <div class="container">
+            <button type="submit" class="btn-en">Enviar encuesta</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- Enlaces de js -->
+    <script>
+      function limitarSeleccion(checkbox) {
+        const checkboxes = document.getElementsByName(checkbox.name);
+
+        checkboxes.forEach((item) => {
+          if (item !== checkbox) {
+            item.checked = false;
+          }
+        });
+      }
+    </script>
+    <script src="scripts/modo-claro.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="scripts/script.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
