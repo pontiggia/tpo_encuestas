@@ -62,5 +62,5 @@ app.config['SQLALCHEMY_DATABASE_URI'] = db_url
 
 Ejecuta el servidor:
 ```bash
-python app.py
+python main.py
 ```
